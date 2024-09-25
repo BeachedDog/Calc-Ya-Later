@@ -15,12 +15,16 @@
     margin-left: 6px;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 30px;
+    text-align: right;
+    font-family:sans-serif;
+    
    
 }
 
 .row{
-    display: flex;
-    justify-content: center;
+     display: flex;
+    justify-content: center; 
 }
 
 .btn{
@@ -35,7 +39,7 @@
 }
 
 #zero{
-    flex:0.85
+    flex:0.86
 }
 
 .green{
@@ -49,3 +53,4 @@
 .orange{
     background-color: rgb(236, 138, 40);
 }
+
