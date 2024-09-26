@@ -73,7 +73,14 @@ wrapper.addEventListener("click", (btn) => {
 
     }else if (firstNumber && secondNumber && operator =="/" && btnAccess.contains("equals")){
         result = Number(firstNumber) / Number(secondNumber);                             //* evaluates the division equation
-        if(String(result).length>8)
+        if (secondNumber==0){
+            output.textContent = "Why U Do Dat?";
+            firstNumber=null;                  //divide by 0 message
+            secondNumber=null;
+            operator=null;
+            result=null;
+            return;
+        } else if(String(result).length>8)
             {result= result.toExponential(8);  
             output.textContent = result;
             firstNumber=result;                               
@@ -96,7 +103,6 @@ wrapper.addEventListener("click", (btn) => {
 
     } else if (firstNumber && secondNumber && operator =="+" && btnAccess.contains("equals")){
         result = Number(firstNumber) + Number(secondNumber);            //* evaluates the addition equation
-        console.log(result)
         if(String(result).length>8)
             {result= result.toExponential(8);                                 
         }output.textContent = result;
